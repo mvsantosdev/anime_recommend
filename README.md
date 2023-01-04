@@ -1,2 +1,2 @@
 # anime_recommend
-Recomendation system based on myanimelist.net
+Recommendation system builty on myanimelist.net databse

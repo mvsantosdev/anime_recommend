@@ -4,12 +4,8 @@ This is a content based anime recommendation system builty on myanimelist.net da
 
 The trained model is deployed as a responsiver streamlit web app:
 
-<center>
-
 <img src="bit.ly_anime_recommend.png" alt= "Streamlit web app" width="150" height="150" href="https://bit.ly/anime_recommend">
 
 https://bit.ly/anime_recommend
-
-</center>
 
 Developed by: [Marcelo Vargas dos Santos](https://github.com/mvsantosdev)

@@ -7,12 +7,20 @@ import streamlit as st
 
 df = pd.read_csv('data/anime_list.csv')
 
-#idx = df['English name'] == 'Unknown'
-#df.loc[idx, 'English name'] = df.loc[idx, 'Name']
-
 with st.sidebar:
     st.header('Select an Anime')
     option = st.selectbox('', df['English name'])
+
+    st.header('About')
+
+    st.write("This is a the deployed content based anime recommendation system builty on myanimelist.net database available in [Kaggle](https://www.kaggle.com/datasets/hernan4444/anime-recommendation-database-2020).")
+
+    st.write("This web app is a part of Marcelo V. dos Santos data science portifolio.")
+
+    st.write("Source code: https://github.com/mvsantosdev/anime_recommend")
+
+
+st.header('Anime recommendation system')
 
 info = df.set_index('English name').loc[option]
 

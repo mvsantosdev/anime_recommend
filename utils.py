@@ -2,7 +2,7 @@ import requests
 import scrapy
 
 
-def get_info(anime_id: int | str):
+def get_info(anime_id):
 
     """
     This function uses web scraping, by scrapy, to get an anime information

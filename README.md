@@ -9,3 +9,10 @@ The trained model is deployed as a streamlit web app:
 https://bit.ly/anime_recommend
 
 Developed by: [Marcelo Vargas dos Santos](https://github.com/mvsantosdev)
+
+
+Project content:
+
+    -   similarity_model.ipynb : In this jupyter notebook I developed a model based on cosine similarity distance of the sinopses vectorized using the ti-idf nlp model.
+    -   index.py : This is the script used by streamlit to deploy the webapp.
+    -   utils.py : Implements utility functions, such as a web scraping to get an anime info from myanimelist.net.

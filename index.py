@@ -7,22 +7,27 @@ import streamlit as st
 
 df = pd.read_csv('data/anime_list.csv')
 
+kaggle_url = "datasets/hernan4444/anime-recommendation-database-2020"
+
 with st.sidebar:
     st.header('Select an Anime')
-    option = st.selectbox('', df['English name'])
+    option = st.selectbox('', df['Name'])
 
     st.header('About')
 
-    st.write("This is a the deployed content based anime recommendation system builty on myanimelist.net database available in [Kaggle](https://www.kaggle.com/datasets/hernan4444/anime-recommendation-database-2020).")
+    st.write("This is a the deployed content based anime recommendation",
+             "system builty on myanimelist.net database available in,"
+             f"[Kaggle](https://www.kaggle.com/{kaggle_url}).")
 
-    st.write("This web app is a part of Marcelo V. dos Santos data science portifolio.")
+    st.write("This web app is a part of Marcelo V. dos Santos",
+             "data science portfolio.")
 
     st.write("Source code: https://github.com/mvsantosdev/anime_recommend")
 
 
 st.header('Anime recommendation system')
 
-info = df.set_index('English name').loc[option]
+info = df.set_index('Name').loc[option]
 
 title = info.name.replace(':', ': ')
 
@@ -56,5 +61,5 @@ for col, idx in zip(cols, sim_idx):
     sim = get_info(idx)
     col.image(sim['image'])
 
-    name = df.set_index('MAL_ID').loc[idx, 'English name']
+    name = df.set_index('MAL_ID').loc[idx, 'Name']
     col.write(f'{name}')

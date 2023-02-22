@@ -1,7 +1,24 @@
 import requests
 import scrapy
 
-def get_info(anime_id):
+
+def get_info(anime_id: int | str):
+
+    """
+    This function uses web scraping, by scrapy, to get an anime information
+    from the myanimelist.net website.
+
+    Parameters
+    ----------
+    anime_id : int or str
+        The myanimelist id.
+
+    Returns
+    -------
+    dict[str, str]
+        Dictionary which contains the anime important information:
+        url, sinopse, image url, teaser url.
+    """
 
     url = f'https://myanimelist.net/anime/{anime_id}'
 
